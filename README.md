@@ -147,6 +147,8 @@ df.loc[condicion, "Total_Venta"] = df["Total_Calculado"]
 
 ## 📊 Visualizaciones
 
+> Los gráficos fueron exportados directamente desde matplotlib con `plt.savefig(dpi=150, bbox_inches="tight")` para garantizar alta resolución.
+
 Se generaron 4 gráficos excluyendo registros con etiquetas vacías (`Sin categoría`, `Sin producto`, `Sin canal`) para no distorsionar el análisis visual.
 
 | Gráfico | Tipo | Variable analizada | Hallazgo principal |
@@ -184,6 +186,7 @@ Se generaron 4 gráficos excluyendo registros con etiquetas vacías (`Sin catego
 - Formato de ejes con `ticker.FuncFormatter` para evitar notación científica
 - Etiquetas de valor sobre barras con `plt.bar_label()` en formato millones (`$xM`)
 - Anotaciones sobre gráfico de línea con `plt.annotate()` en loop con `xytext` y `offset points`
+- Exportación de gráficos en alta calidad con `plt.savefig()` usando `dpi=150` y `bbox_inches="tight"`
 
 ---
 
